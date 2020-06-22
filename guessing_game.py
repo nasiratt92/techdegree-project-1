@@ -12,8 +12,8 @@ NOTE: If you strongly prefer to work locally on your own computer, you can total
 import random
 
 
-def quesion():
-    guess = int(input("Guess a number between 1 - 10:  "))
+#def quesion():
+#    guess = int(input("Guess a number between 1 - 10:  "))
 
 def start_game():
     #print("hello world !")
@@ -27,8 +27,8 @@ def start_game():
     """2. Store a random number as the answer/solution."""
     solution = random.randrange(1, 11)
     """3. Continuously prompt the player for a guess."""
-    print(solution)
-    guess_tally = 0
+    #print(solution)
+    guess_tally = 1
 
     #quesion()
     """a. If the guess greater than the solution, display to the player "It's lower".
@@ -54,7 +54,7 @@ def start_game():
     #( You can add more features/enhancements if you'd like to. )
     print(
     """\nThis game has ended
-\nYou took {} guesses to guess the right number"""
+\nYou took {} guess(es) to guess the right number"""
     .format(guess_tally))
     # write your code inside this function.
 
