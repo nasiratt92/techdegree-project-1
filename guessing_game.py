@@ -33,8 +33,8 @@ def start_game():
     #quesion()
     """a. If the guess greater than the solution, display to the player "It's lower".
       b. If the guess is less than the solution, display to the player "It's higher"."""
-    valid_guess = False
     while True:
+        valid_guess = False
 
         while not valid_guess:
             guess = input("Guess a number between 1 - 10:  ")
