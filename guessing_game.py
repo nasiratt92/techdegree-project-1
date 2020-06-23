@@ -33,9 +33,31 @@ def start_game():
     #quesion()
     """a. If the guess greater than the solution, display to the player "It's lower".
       b. If the guess is less than the solution, display to the player "It's higher"."""
-
+    valid_guess = False
     while True:
-        guess = int(input("Guess a number between 1 - 10:  "))
+        while not valid_guess:
+            try:
+                valid_guess = True
+                guess = int(input("Guess a number between 1 - 10:  "))
+            except ValueError:
+                print("ValueError: invalid literal for int() with base 10: ", guess)
+            valid_guess = True
+
+        # Try except stuff goes here
+    # We already have guess from the while not valid_guess: loop
+
+        if guess == solution:
+            print("\nCongrats you guessed right")
+            break
+        elif guess < solution:
+            guess_tally += 1
+            print("It's higher")
+            continue
+        elif guess > solution:
+            guess_tally += 1
+            print("It's lower")
+            continue
+
         if guess == solution:
             print("\nCongrats you guessed right")
             break
