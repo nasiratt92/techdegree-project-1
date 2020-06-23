@@ -15,6 +15,7 @@ I started by downloading the starter code and coded in a simple "Hello World!" t
 
 ### Challenges
 - I created a function called **question()** which I though I will invoke every time a user got a wrong guess but because I was using a while true loop it did not work and was superfluous. I had to use the re assignment of guess variable at the beginning of the loop
+- It was challenging to code the error handler using while loop, try except block and setting boolean to False
 
 ### Wins
 - I created a variable named guess_tally which allowed me to keep track of all guesses
