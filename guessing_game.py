@@ -37,28 +37,17 @@ def start_game():
     while True:
 
         while not valid_guess:
-            guess = int(input("Guess a number between 1 - 10:  "))
+            guess = input("Guess a number between 1 - 10:  ")
             try:
                 guess = int(guess)
             except ValueError:
                 print("ValueError: invalid literal for int() with base 10: ", guess)
             else:
                 valid_guess = True
-
+        valid_guess = False
         # Try except stuff goes here
     # We already have guess from the while not valid_guess: loop
 
-        if guess == solution:
-            print("\nCongrats you guessed right")
-            break
-        elif guess < solution:
-            guess_tally += 1
-            print("It's higher")
-            continue
-        elif guess > solution:
-            guess_tally += 1
-            print("It's lower")
-            continue
 
         if guess == solution:
             print("\nCongrats you guessed right")
